@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webdeves-Academy</title>
+</head>
+<body>
+    <section>
+        <center>
+            <h1>
+                Welcome <span id="fname"></span> <span id="lname"></span> . 
+                Your registration with Webdeves Academy, was successful.
+            </h1>
+        </center>
+
+        <script>
+            window.addEventListener('load', () =>{
+                let firstName = localStorage.getItem('FIRSTNAME');
+                let lastName = localStorage.getItem('LASTNAME');
+
+                document.getElementById('fname').innerHTML = firstName;
+                document.getElementById('lname').innerHTML = lastName;
+            })
+        </script>
+    </section>
+</body>
+</html>

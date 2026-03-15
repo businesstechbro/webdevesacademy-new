@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="welcome.html" method="POST" name="myform" onsubmit="return checkIsRegistered()">
+        <div class="login__form">            
+            <label class="form__label">Firstname</label>
+            <p id="error-1"></p>
+            <input class="common__login__input" type="text" placeholder="Your firstname" id="fname">
+
+        </div>
+
+        <div class="login__form"> 
+            <label class="form__label">Lastname</label>
+             <p id="error-2"></p>
+            <input class="common__login__input" type="text" placeholder="Your lastname" id="lname">
+
+        </div>
+        <div class="login__form">                       
+            <label class="form__label">Email</label>
+            <p id="error-3"></p>
+            <input class="common__login__input" type="email" placeholder="Email" id="email">
+
+        </div>
+
+
+
+        <div class="login__form">                 
+            <label class="form__label">Select batch</label>
+            <p id="error-4"></p>
+            <select class="common__login__input bg-dark">
+                <option>Select</option>
+                <option>January batch</option>
+                <option>February batch</option>
+                <option>March batch</option>
+                <option>April batch</option>
+                <option>May batch</option>
+                <option>June batch</option>
+                <option>July batch</option>
+                <option>August batch</option>
+                <option>September batch</option>
+                <option>October batch</option>
+                <option>November batch</option>
+                <option>December batch</option>
+            </select>
+        </div>
+
+
+        <div class="login__form">     
+            <label class="form__label">Phone</label>
+            <p id="error-5"></p>
+            <input class="common__login__input" type="tel" placeholder="Phone number" id="phone">
+
+        </div>
+
+
+        <div class="login__form">    
+            <label class="form__label">Address</label>
+            <p id="error-6"></p>
+            <input class="common__login__input" type="text" placeholder="Home address" id="address">
+
+        </div>
+
+        <div class="login__form">
+            <label class="form__label">Select course</label>
+            <p id="error-7"></p>
+            <select class="common__login__input bg-dark">
+                <option>Select</option>
+                <option>Front-end Website Development</option>
+                <option>Back-end Website Development</option>
+                <option>Full-Stack Website Development</option>
+                <option>Digital Marketing</option>
+                <option>UI/UX Designing</option>
+                <option>Cyber Security</option>
+                <option>Graphics Designs</option>
+                <option>Data Science / Analysis</option>
+                <option>Computer Basics</option>
+            </select>
+
+        </div>
+     
+        <!-- <div class="login__button"> -->
+            <button type="submit">Register</button>
+            <!-- <button class="default__button" type="submit"></button> -->
+        <!-- </div> -->
+    </form>
+
+    
+
+
+
+
+
+
+
+
+    <script>
+        function checkIsRegistered() {
+            let firstName = document.getElementById('fname').value;
+            let lastName = document.getElementById('lname').value;
+            let eMail = document.getElementById('email').value;
+            let pHone = document.getElementById('phone').value;
+            let addRess = document.getElementById('address').value;
+            const errors = ['hhjghjkhhhj', 'hghjjjhhhj'];
+
+            if(firstName.trim() == "" || firstName.value == ""){
+                document.getElementById('error-1').innerHTML = "*please fill in firstname*";
+                return false;
+            }
+            // }if (lastName.trim() == "" || lastName.value == ""){
+            //     document.getElementById('error-2').innerHTML = "*please fill in the lastname*";
+            //     return false
+            // }if (eMail.trim() == "" || eMail.value == ""){
+            //     document.getElementById('error-3').innerHTML = "*please fill the email*";
+            //     return false;
+            // }
+            // else{
+                alert(errors[1]);
+                localStorage.setItem("FIRSTNAME", firstName);
+                localStorage.setItem("LASTNAME", lastName);
+                return true;
+            // }
+        }
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+/*site-header*/
+.site-header{
+	position: relative;
+	width: 100%;
+	height: auto;
+	background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../img/services-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 150px 0px;
+	margin-top: 70px;
+	color: #ffffff;
+}
+@media screen and (max-width:500px){
+	.site-header{
+		margin-top: 50px !important;
+	}
+	.site-header{
+	padding: 100px 0px !important;
+}
+}
+/*top-cards-sec*/
+.top-cards-sec{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 50px;
+	z-index: 200;
+}
+
+.aopp-sec-grid{
+	  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 40px;
+  grid-template-rows:auto;
+}
+@media screen and (max-width:700px){
+.aopp-sec-grid{
+	display: block !important;
+}
+.aopp-sec-grid-card{
+	margin-top: 25px !important;
+}
+.aopp-sec-grid-card:first-child{
+	margin-top: 0px !important;
+}
+}
+.aopp-sec-grid-card{
+	position: relative;
+	width: 100%;
+	height: auto;
+	-webkit-box-shadow: rgb(199 196 218 / 60%) 20px 20px 100px;
+	-moz-box-shadow: rgb(199 196 218 / 60%) 20px 20px 100px;
+	box-shadow: rgb(199 196 218 / 60%) 20px 20px 100px;
+	background: #ffffff;
+	display: block;
+}
+@media screen and (max-width:400px){
+.aopp-sec-grid-card-txt{
+	padding: 30px !important;
+}
+}
+.aopp-sec-grid-card img{
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+}
+.aopp-sec-grid-card-txt{
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding:40px 20px;
+}
+.aopp-sec-grid-card-txt h4{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: 700;
+}
+.aopp-sec-grid-card-txt p{
+	margin: 0;
+	padding: 0;
+	opacity: 0.9;
+}
+
+.aopp-sec-grid-card-txt span{
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	font-size: 12px;
+}
+.aopp-sec-grid-card-txt span i{
+	margin-left: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
+.aopp-sec-grid-card:hover .aopp-sec-grid-card-txt span i{
+	margin-left: 15px;
+}
