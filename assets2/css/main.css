@@ -32547,8 +32547,8 @@ body.tp-magic-cursor #magic-cursor {
   background-repeat: no-repeat;
 }
 .tp-showcase-slider-bg::after {
-  opacity: 0.3;
-  background: #1d1d1d;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.55);
   content: "";
   position: absolute;
   width: 100%;
@@ -32557,6 +32557,11 @@ body.tp-magic-cursor #magic-cursor {
   left: 0;
   z-index: 1;
   pointer-events: none;
+}
+.tp-showcase-slider-title,
+.tp-showcase-slider-subtitle,
+.tp-showcase-slider-content p {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
 }
 .tp-showcase-slider-subtitle {
   font-weight: 600;
